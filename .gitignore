@@ -1,0 +1,29 @@
+
+Temp/
+obj/
+classes/
+generated/
+*.suo
+bin/
+*_out*
+* Out*
+*_out_*
+* out*
+*.ldb
+Thumbs.db
+_ReSharper*/
+out/
+*.lic
+*.user
+Out/
+Data/*Out*
+packages/
+TestResults/
+*.vsmdi
+test-results/
+*.userprefs
+/ProgrammersGuide/ProgrammingEmail/SendingWithSMTP/AppointmentInICSFormat/Data/test.ics
+TestResults/
+*.vsmdi
+*.gitattributes
+*.log

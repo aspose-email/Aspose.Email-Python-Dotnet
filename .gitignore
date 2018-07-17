@@ -27,3 +27,5 @@ TestResults/
 *.vsmdi
 *.gitattributes
 *.log
+__pycache__
+*.pyc

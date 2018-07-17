@@ -1,7 +1,7 @@
 from aspose.email.storage.pst import *
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: SearchingStringInPSTWithIgnoreCaseParameter
 	pst = PersonalStorage.from_file(dataDir + "Outlook.pst")
 				

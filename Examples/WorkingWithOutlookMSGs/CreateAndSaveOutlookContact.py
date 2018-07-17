@@ -8,7 +8,7 @@ from aspose.email.mapi import MapiContactTelephonePropertySet
 
 def run():
 
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: CreateAndSaveOutlookContact
 	contact = MapiContact()
 	contact.name_info = MapiContactNamePropertySet("Bertha", "A.", "Buell")

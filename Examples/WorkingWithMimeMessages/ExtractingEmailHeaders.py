@@ -1,7 +1,7 @@
 from aspose.email import MailMessage
 
 def run():    
-    dataDir = ""
+    dataDir = "Data/"
     #ExStart: ExtractingEmailHeaders
     # Create MailMessage instance by loading an EML file
     message = MailMessage.load(dataDir + "email-headers.eml");

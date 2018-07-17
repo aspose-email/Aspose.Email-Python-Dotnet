@@ -2,7 +2,7 @@ from aspose.email.storage.pst import *
 from aspose.email.mapi import MapiMessage
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: AddMessagesToPSTFiles
 	pst = PersonalStorage.create(dataDir + "AddMessagesToPst_out.pst", FileFormatVersion.UNICODE)
 

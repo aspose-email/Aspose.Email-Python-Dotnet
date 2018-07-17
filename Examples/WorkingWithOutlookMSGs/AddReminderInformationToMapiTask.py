@@ -6,7 +6,7 @@ from aspose.email.mapi import MapiTaskOwnership, MapiTaskStatus
 import datetime as dt
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: AddReminderInformationToMapiTask
 	task = MapiTask("To Do", "Just click and type to add new task", dt.datetime(2018, 6, 1, 21, 30, 0), dt.datetime(2018, 6, 4, 21, 30, 0))
 	task.reminder_set = True

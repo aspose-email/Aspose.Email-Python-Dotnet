@@ -10,7 +10,7 @@ from datetime import timedelta
 import os
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: CreateAndSaveCalendarItems
 	# Create the appointment
 	calendar = MapiCalendar(

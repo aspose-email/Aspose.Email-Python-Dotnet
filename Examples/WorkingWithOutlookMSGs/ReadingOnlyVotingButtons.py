@@ -5,9 +5,9 @@ import aspose.email.mapi.msg as msg
 from aspose.email.mapi import MapiMessage, FollowUpManager
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: ReadingOnlyVotingButtons
-	message = MapiMessage.from_file("MessageWithVotingResponded.msg")
+	message = MapiMessage.from_file(dataDir + "MessageWithVotingResponded.msg")
 
 	buttons = FollowUpManager.get_voting_buttons(message)
 

@@ -6,7 +6,7 @@ import datetime as dt
 from datetime import timedelta
 
 def run():
-    dataDir = ""
+    dataDir = "Data/"
 
     #ExStart: ReadMultipleEventsFromICS
     #Load Appointment instance

@@ -12,7 +12,7 @@ import datetime as dt
 from datetime import timedelta
 
 def run():
-    dataDir = ""
+    dataDir = "Data/"
     #ExStart: CreateAppointmentFromString
     ical = """BEGIN:VCALENDAR
     METHOD:PUBLISH

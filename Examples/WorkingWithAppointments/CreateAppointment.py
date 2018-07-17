@@ -7,7 +7,7 @@ import datetime as dt
 from datetime import timedelta
 
 def run():
-    dataDir = ""
+    dataDir = "Data/"
     #ExStart: CreateAppointment
     #Create Appointment instance
     attendees = MailAddressCollection()

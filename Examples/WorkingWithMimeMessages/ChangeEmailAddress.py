@@ -3,7 +3,7 @@ from aspose.email import MailAddress
 from aspose.email import SaveOptions
 
 def run():    
-    dataDir = ""
+    dataDir = "Data/"
     #ExStart:ChangeEmailAddress
     message = MailMessage();
 

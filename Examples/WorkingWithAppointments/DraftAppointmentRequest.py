@@ -10,7 +10,7 @@ import datetime as dt
 from datetime import timedelta
 
 def run():
-    dataDir = ""
+    dataDir = "Data/"
     #ExStart: DraftAppointmentRequest
     #Create Appointment instance
     attendees = MailAddressCollection()
@@ -27,7 +27,7 @@ def run():
     msg = MapiMessage.from_mail_message(message)
 
     # Save the appointment as draft.
-    msg.save("DraftAppointmentRequest_out.msg")
+    msg.save(dataDir + "DraftAppointmentRequest_out.msg")
     #ExEnd: DraftAppointmentRequest
 
 if __name__ == '__main__':

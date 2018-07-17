@@ -5,7 +5,7 @@ import aspose.email.mapi.msg as msg
 from aspose.email.mapi import MapiMessage, MapiProperty, MapiConversionOptions
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: PreservingEmbeddedMsgFormat
 	eml =  MailMessage.load(dataDir + "sample.eml", EmlLoadOptions())
 

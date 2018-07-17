@@ -1,8 +1,8 @@
 from aspose.email.storage.pst import *
 
-dfine run():
+def run():
 
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: MoveItemsToOtherFolders
 	personalStorage = PersonalStorage.from_file(dataDir + "test.pst")
 

@@ -3,7 +3,7 @@ from aspose.email.mapi import MapiNote, NoteSaveFormat, NoteColor
 
 def run():
 
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: CreateAndSaveOutlookNote
 	note3 = MapiNote()
 	note3.subject = "Blue color note"

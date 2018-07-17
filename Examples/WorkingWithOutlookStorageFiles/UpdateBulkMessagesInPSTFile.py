@@ -1,7 +1,10 @@
 from aspose.email.storage.pst import *
 
+def long_to_mapi_bytes(x):
+    return x.to_bytes(8, 'little')
+
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: UpdateBulkMessagesInPSTFile
 	pst = PersonalStorage.from_file(dataDir + "test.pst")
 				
@@ -22,8 +25,8 @@ def run():
 		
 	# Compose the new properties
 	updatedProperties = MapiPropertyCollection()
-	updatedProperties.Add(MapiPropertyTag.PR_SUBJECT_W, new MapiProperty(MapiPropertyTag.PR_SUBJECT_W, Encoding.Unicode.GetBytes("New Subject")));
-	updatedProperties.Add(MapiPropertyTag.PR_IMPORTANCE, new MapiProperty(MapiPropertyTag.PR_IMPORTANCE, BitConverter.GetBytes((long)2)));
+	updatedProperties.Add(MapiPropertyTag.SUBJECT_W, MapiProperty(MapiPropertyTag.SUBJECT_W, Encoding.Unicode.GetBytes("New Subject")));
+	updatedProperties.Add(MapiPropertyTag.IMPORTANCE, MapiProperty(MapiPropertyTag.IMPORTANCE, long_to_mapi_bytes(2)));
 
 	# update messages having From = "someuser@domain.com" with new properties
 	inbox.ChangeMessages(changeList, updatedProperties);

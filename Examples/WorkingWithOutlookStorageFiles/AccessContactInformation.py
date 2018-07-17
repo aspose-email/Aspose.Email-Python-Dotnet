@@ -3,7 +3,7 @@ from aspose.email.mapi import MapiContact
 from aspose.email.mapi import ContactSaveFormat
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: AccessContactInformation
 	pst = PersonalStorage.from_file(dataDir + "SampleContacts_out.pst")
 				

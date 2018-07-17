@@ -6,7 +6,7 @@ import datetime as dt
 from datetime import timedelta
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: AddMapiTaskToPST
 	task = MapiTask("To Do", "Just click and type to add new task", dt.datetime.now(), dt.datetime.today() + timedelta(days=3))
 	task.percent_complete = 20

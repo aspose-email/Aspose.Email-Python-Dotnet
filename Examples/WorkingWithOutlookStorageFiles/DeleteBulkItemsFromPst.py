@@ -1,7 +1,7 @@
 from aspose.email.storage.pst import *
 
-define run():
-	dataDir = ""
+def run():
+	dataDir = "Data/"
 	#ExStart: DeleteBulkItemsFromPst
 	pst = PersonalStorage.from_file(dataDir + "Outlook.pst")
 				
@@ -20,10 +20,10 @@ define run():
 	deleteList = []
 
 	for messageInfo in messages:
-		deleteList.append(messageInfo.entry_id_string)
+                deleteList.append(messageInfo.entry_id_string)
 
 	folder.delete_child_items(deleteList)
 	#ExEnd: DeleteBulkItemsFromPst
 	
 if __name__ == '__main__':
-    run()
+        run()

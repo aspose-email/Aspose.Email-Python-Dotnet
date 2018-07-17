@@ -5,7 +5,7 @@ import datetime as dt
 from datetime import timedelta
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: CreateNewMapiJournalAndAddToPST
 	journal =MapiJournal("daily record", "called out in the dark", "Phone call", "Phone call")
 	journal.start_time = dt.datetime.now();

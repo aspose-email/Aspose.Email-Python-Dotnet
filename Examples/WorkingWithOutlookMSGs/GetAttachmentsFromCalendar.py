@@ -11,7 +11,7 @@ from datetime import timedelta
 import os
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: GetAttachmentsFromCalendar
 	# Create the appointment
 	attendees = MailAddressCollection()
@@ -23,7 +23,7 @@ def run():
 	app.attachments.append(Attachment("1.jpg"))
 	app.attachments.append(Attachment("1.doc"))
 
-	app.save("appWithAttachments_out.ics", AppointmentSaveFormat.ICS)
+	app.save(dataDir + "appWithAttachments_out.ics", AppointmentSaveFormat.ICS)
 
 	#Read the attachments from CIS
 	app2 = Appointment.load(dataDir + "appWithAttachments_out.ics")

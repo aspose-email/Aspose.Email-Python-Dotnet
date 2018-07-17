@@ -6,7 +6,7 @@ from aspose.email.mapi import MapiMessage, MapiProperty
 from aspose.email import Attachment
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: AddingMSGAttachments
 	eml =  MailMessage()
 

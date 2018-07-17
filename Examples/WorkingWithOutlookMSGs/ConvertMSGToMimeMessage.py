@@ -5,7 +5,7 @@ import aspose.email.mapi.msg as msg
 from aspose.email.mapi import MapiMessage, MapiProperty, MapiMessageFlags,  MailConversionOptions
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: ConvertMSGToMimeMessage
 	# Create an instance of the MapiMessage class
 	msg = MapiMessage("sender@test.com","recipient1@test.com; recipient2@test.com","Test Subject","This is a body of message.")

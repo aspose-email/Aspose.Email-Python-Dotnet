@@ -2,27 +2,25 @@ from aspose.email.storage.pst import *
 from aspose.email.mapi import MapiMessage
 from aspose.email import License
 
+# Recursive method to traverse through all folders of a PST
+def DisplayFolderContents(folderInfo, pst):
+        print("Folder: " + folderInfo.display_name)
 
+        print("==================================");
 
-	# Recursive method to traverse through all folders of a PST
-	def DisplayFolderContents(folderInfo, pst):
-		print("Folder: " + folderInfo.display_name)
+        # Display information about messages inside this folder
+        messageInfoCollection = folderInfo.get_contents()
 
-		print("==================================");
+        for messageInfo in messageInfoCollection:
+                print ("Subject: " + messageInfo.subject)
+                print("To: " + messageInfo.display_to)
 
-		# Display information about messages inside this folder
-		messageInfoCollection = folderInfo.get_contents()
-
-		for messageInfo in messageInfoCollection:
-			print ("Subject: " + messageInfo.subject)
-			print("To: " + messageInfo.display_to)
-
-		if folderInfo.has_sub_folders is True:
-			for subFolderInfo in folderInfo.get_sub_folders():
-				DisplayFolderContents(subFolderInfo, pst)
+        if folderInfo.has_sub_folders is True:
+                for subFolderInfo in folderInfo.get_sub_folders():
+                        DisplayFolderContents(subFolderInfo, pst)
 
 def run():					
-	dataDir = ""
+	dataDir = "Data/"
 
 	#ExStart: GetMessagesInformation
 	#Read PST file and recursively list its contents

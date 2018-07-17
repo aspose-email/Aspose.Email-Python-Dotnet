@@ -5,9 +5,9 @@ import aspose.email.mapi.msg as msg
 from aspose.email.mapi import MapiMessage, MapiProperty, FollowUpManager
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: LoadingContactFromMSG
-	message = MapiMessage.from_file("Contact.msg")
+	message = MapiMessage.from_file(dataDir + "Contact.msg")
 
 	apiContact = message.to_mapi_message_item()
 	#ExEnd: LoadingContactFromMSG

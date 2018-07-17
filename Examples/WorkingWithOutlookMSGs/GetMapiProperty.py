@@ -6,7 +6,7 @@ from aspose.email.mapi import MapiMessage, MapiProperty, MapiPropertyTag
 
 def run():
 
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: GetMapiProperty
 	# Load from file
 	msg = MapiMessage.from_file(dataDir + "message.msg")

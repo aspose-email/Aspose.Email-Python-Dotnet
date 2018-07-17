@@ -1,7 +1,7 @@
 from aspose.email.mapi import MapiMessage, MapiProperty
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: LoadMsgFiles
 	# Create an instance of MapiMessage from file
 	msg = MapiMessage.from_file(dataDir + "CreatingAndSavingOutlookMessages_out.msg")

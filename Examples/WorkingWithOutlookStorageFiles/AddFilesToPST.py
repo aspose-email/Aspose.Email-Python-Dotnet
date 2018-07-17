@@ -1,7 +1,7 @@
 from aspose.email.storage.pst import *
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: AddFilesToPST
 	personalStorage = PersonalStorage.create(dataDir + "AddFilesToPst_out.pst", FileFormatVersion.UNICODE)
 

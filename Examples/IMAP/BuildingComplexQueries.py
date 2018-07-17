@@ -38,5 +38,5 @@ def run():
 	except Exception as ex:
 		print(str(ex))
 
-if _name_ == '__main__':
+if __name__ == '__main__':
     run()

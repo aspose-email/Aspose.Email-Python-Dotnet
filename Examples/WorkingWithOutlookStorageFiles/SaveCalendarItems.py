@@ -10,7 +10,7 @@ from datetime import timedelta
 import os
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: SaveCalendarItems
 	personalStorage = PersonalStorage.from_file(dataDir + "AddMapiCalendarToPST_out.pst")
 

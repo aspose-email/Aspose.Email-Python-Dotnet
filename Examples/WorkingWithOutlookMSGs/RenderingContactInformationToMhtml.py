@@ -6,9 +6,9 @@ from aspose.email.personalinfo.vcard import VCardContact
 
 def run():
 
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: RenderingContactInformationToMhtml
-	msg = MapiMessage.from_file("Contact.msg")
+	msg = MapiMessage.from_file(dataDir + "Contact.msg")
 	op = MailConversionOptions()
 	eml = msg.to_mail_message(op)
 

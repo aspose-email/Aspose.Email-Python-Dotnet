@@ -10,7 +10,7 @@ from datetime import timedelta
 import os
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: DisplayInformationOfPSTFile
 	personalStorage = PersonalStorage.from_file(dataDir + "Outlook.pst")
 

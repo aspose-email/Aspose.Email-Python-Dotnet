@@ -5,7 +5,7 @@ from aspose.email.mapi import MapiMessage, MapiContact
 from aspose.email.personalinfo.vcard import VCardContact
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: LoadingContactFromVCF
 	VCardContact.load(dataDir + "Contact.vcf")
 

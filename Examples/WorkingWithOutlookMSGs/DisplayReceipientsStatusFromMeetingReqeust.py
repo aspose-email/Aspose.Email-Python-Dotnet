@@ -4,9 +4,9 @@ import aspose.email.mapi.msg as msg
 from aspose.email.mapi import MapiMessage
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: DisplayReceipientsStatusFromMeetingReqeust
-	message = MapiMessage.from_file("filename.msg")
+	message = MapiMessage.from_file(dataDir + "filename.msg")
 	for recipient in message.recipients:
 		print(recipient.recipient_track_status)
 	#ExEnd: DisplayReceipientsStatusFromMeetingReqeust

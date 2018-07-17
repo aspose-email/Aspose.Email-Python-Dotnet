@@ -5,7 +5,7 @@ import aspose.email.mapi.msg as msg
 from aspose.email.mapi import MapiMessage, MapiProperty, MapiMessageFlags
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: SavingMessageInDraftStatus
 	# Create an instance of the MapiMessage class
 	outlookMsg = MapiMessage()

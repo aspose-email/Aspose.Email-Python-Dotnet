@@ -5,7 +5,7 @@ import aspose.email.mapi.msg as msg
 from aspose.email.mapi import MapiMessage, FollowUpManager
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: AddingVotingButtonToExistingMessage
 	message = MapiMessage.from_file("message.msg")
 

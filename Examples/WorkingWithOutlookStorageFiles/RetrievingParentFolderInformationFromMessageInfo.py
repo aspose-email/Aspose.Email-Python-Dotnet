@@ -9,8 +9,8 @@ from datetime import timedelta
 
 import os
 
-define run():
-	dataDir = ""
+def run():
+	dataDir = "Data/"
 	#ExStart: RetrievingParentFolderInformationFromMessageInfo
 	personalStorage = PersonalStorage.from_file(dataDir + "Outlook.pst")
 

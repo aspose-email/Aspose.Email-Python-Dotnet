@@ -1,7 +1,7 @@
 from aspose.email.storage.pst import *
 
-define run():
-	dataDir = ""
+def run():
+	dataDir = "Data/"
 	#ExStart: ReadingOSTFiles
 	pst = PersonalStorage.from_file(dataDir + "PersonalStorageFile.ost")
 				

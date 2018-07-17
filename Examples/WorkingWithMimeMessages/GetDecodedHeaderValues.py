@@ -2,7 +2,7 @@ from aspose.email import MailMessage
 
 def run():
     
-    dataDir = ""
+    dataDir = "Data/"
     #ExStart: GetDecodedHeaderValues
     mailMessage = MailMessage.load(dataDir + "emlWithHeaders.eml");
 

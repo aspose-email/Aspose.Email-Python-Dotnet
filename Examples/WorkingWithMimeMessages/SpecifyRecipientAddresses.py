@@ -2,7 +2,7 @@ import aspose.email as ae
 from aspose.email.clients.smtp import SmtpClient
 
 def run():
-    dataDir = "";
+    dataDir = "Data/";
     #ExStart: SpecifyRecipientAddresses
     eml = ae.MailMessage()
     eml.subject = "New MailMessage created with Aspose.Email for Python"

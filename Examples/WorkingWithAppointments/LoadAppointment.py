@@ -7,7 +7,7 @@ import datetime as dt
 from datetime import timedelta
 
 def run():
-    dataDir = ""
+    dataDir = "Data/"
     #ExStart: LoadAppointment
     #Load Appointment instance
     loadedAppointment = Appointment.load(dataDir + "AppointmentInICSFormat_out.ics")

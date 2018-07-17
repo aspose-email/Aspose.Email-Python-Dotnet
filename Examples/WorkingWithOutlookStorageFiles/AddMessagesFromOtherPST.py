@@ -2,14 +2,14 @@ from aspose.email.storage.pst import *
 from aspose.email.mapi import MapiMessage
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: AddMessagesFromOtherPST
 	sourcePst = PersonalStorage.from_file(dataDir + "Outlook.pst")
 
 	# Add new folder "Inbox"
 	sourceFolder = sourcePst.root_folder.get_sub_folder("Inbox")
 
-	destPst = PersonalStorage.create("DestinationPst_out.pst", FileFormatVersion.UNICODE)
+	destPst = PersonalStorage.create(dataDir + "DestinationPst_out.pst", FileFormatVersion.UNICODE)
 
 	# Add new folder "Inbox"
 	destFolder = destPst.root_folder.add_sub_folder("Inbox")

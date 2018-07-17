@@ -2,7 +2,7 @@ from aspose.email.storage.pst import *
 from aspose.email.mapi import MapiMessage
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: ChangeFolderContainerClass
 	pst = PersonalStorage.from_file(dataDir + "PstWithPython_out.pst")
 

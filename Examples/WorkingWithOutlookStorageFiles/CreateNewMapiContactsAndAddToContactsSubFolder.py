@@ -7,7 +7,7 @@ from aspose.email.mapi import MapiContactProfessionalPropertySet
 from aspose.email.mapi import MapiContactTelephonePropertySet
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: CreateNewMapiContactsAndAddToContactsSubFolder
 	# Create three Contacts 
 	contact1 =  MapiContact("Sebastian Wright", "SebastianWright@dayrep.com")

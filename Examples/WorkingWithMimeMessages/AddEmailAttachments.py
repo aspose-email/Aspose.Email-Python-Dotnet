@@ -4,7 +4,7 @@ from aspose.email import SaveOptions
 
 def run():
 
-    dataDir = ""
+    dataDir = "Data/"
     #ExStart: AddEmailAttachments             
     # Create an instance of MailMessage class
     message = MailMessage("sender@domain.com", "receiver@domain.com")

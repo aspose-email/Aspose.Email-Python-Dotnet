@@ -3,10 +3,10 @@ from aspose.email import Attachment
 from aspose.email import SaveOptions
 
 def run():
-    dataDir = ""
+    dataDir = "Data/"
     #ExStart: DisplayAttachmentFileName
     # Create an instance of MailMessage class
-    message = MailMessage.load("EmailWithAttandEmbedded.eml")
+    message = MailMessage.load(dataDir + "EmailWithAttandEmbedded.eml")
 
     # Print attachments information
     for index, att in enumerate(message.attachments):

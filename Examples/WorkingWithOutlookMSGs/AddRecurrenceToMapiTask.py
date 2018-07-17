@@ -7,7 +7,7 @@ from aspose.email.mapi import MapiCalendarDailyRecurrencePattern, MapiCalendarRe
 import datetime as dt
 
 def run():
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: AddRecurrenceToMapiTask
 	startDate = dt.datetime(2015, 4, 30, 10, 00, 00)
 	task = MapiTask("abc", "def", startDate, dt.datetime(2015, 4, 30, 11, 00, 00))

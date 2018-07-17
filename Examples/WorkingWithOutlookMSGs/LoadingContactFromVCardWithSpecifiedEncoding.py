@@ -6,7 +6,7 @@ from aspose.email.personalinfo.vcard import VCardContact
 
 def run():
 
-	dataDir = ""
+	dataDir = "Data/"
 	#ExStart: LoadingContactFromVCardWithSpecifiedEncoding
 	contactReadFromFile = MapiContact.from_vcard(dataDir + "Contact.vcf", "UTF-8")
 	#ExEnd: LoadingContactFromVCardWithSpecifiedEncoding

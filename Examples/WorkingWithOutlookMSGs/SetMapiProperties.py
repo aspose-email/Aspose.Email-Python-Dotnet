@@ -36,27 +36,28 @@ def date_to_mapi_bytes(dt):
 #ExEnd: ConvertDateTime
 def run():
 
-	#ExStart: SetMapiProperties
-	# Setting MAPI Properties sample
-	msg = MapiMessage("user1@gmail.com", "user2@gmail.com", "This is subject", "This is body")
-	msg.set_property(MapiProperty(MapiPropertyTag.SENDER_ADDRTYPE, bytes("EX", "utf-8")))
+    dataDir = "Data/"
+    #ExStart: SetMapiProperties
+    # Setting MAPI Properties sample
+    msg = MapiMessage("user1@gmail.com", "user2@gmail.com", "This is subject", "This is body")
+    msg.set_property(MapiProperty(MapiPropertyTag.SENDER_ADDRTYPE, bytes("EX", "utf-8")))
 
-	recipientTo = msg.recipients[0]
-	propAddressType = MapiProperty(MapiPropertyTag.RECEIVED_BY_ADDRTYPE, bytes("MYFAX", "utf-8"))
-	recipientTo.set_property(propAddressType);
+    recipientTo = msg.recipients[0]
+    propAddressType = MapiProperty(MapiPropertyTag.RECEIVED_BY_ADDRTYPE, bytes("MYFAX", "utf-8"))
+    recipientTo.set_property(propAddressType);
 
-	faxAddress = "My Fax User@/FN=fax#/VN=voice#/CO=My Company/CI=Local"
-	propEmailAddress = MapiProperty(MapiPropertyTag.RECEIVED_BY_EMAIL_ADDRESS, bytes(faxAddress, "utf-8"))
-				
-	recipientTo.set_property(propEmailAddress)
+    faxAddress = "My Fax User@/FN=fax#/VN=voice#/CO=My Company/CI=Local"
+    propEmailAddress = MapiProperty(MapiPropertyTag.RECEIVED_BY_EMAIL_ADDRESS, bytes(faxAddress, "utf-8"))
 
-	msg.set_message_flags(MapiMessageFlags.UNSENT | MapiMessageFlags.FROMME)
-	msg.set_property( MapiProperty(MapiPropertyTag.RTF_IN_SYNC, long_to_mapi_bytes(1)) )
+    recipientTo.set_property(propEmailAddress)
 
-	# DateTime property
-	modification_date = datetime(2013, 9, 11)
-	prop = MapiProperty(MapiPropertyTag.LAST_MODIFICATION_TIME, date_to_mapi_bytes(modification_date))
-	msg.set_property(prop)
+    msg.set_message_flags(MapiMessageFlags.UNSENT | MapiMessageFlags.FROMME)
+    msg.set_property( MapiProperty(MapiPropertyTag.RTF_IN_SYNC, long_to_mapi_bytes(1)) )
 
-	msg.save("SetMapiProperties_out.msg")
-	#ExEnd: SetMapiProperties
+    # DateTime property
+    modification_date = datetime(2013, 9, 11)
+    prop = MapiProperty(MapiPropertyTag.LAST_MODIFICATION_TIME, date_to_mapi_bytes(modification_date))
+    msg.set_property(prop)
+
+    msg.save(dataDir + "SetMapiProperties_out.msg")
+    #ExEnd: SetMapiProperties

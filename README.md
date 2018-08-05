@@ -20,6 +20,6 @@ Directory | Description
 + **Website:** [www.aspose.com](https://www.aspose.com)
 + **Product Home:** [Aspose.Email for Python via .NET](https://products.aspose.com/email/python-net)
 + **Download:** [Download Aspose.Email for Python via .NET](https://downloads.aspose.com/email/net)
-+ **Documentation:** [Aspose.Email for Python via .NET Documentation](https://docs.aspose.com/display/emailnet/Home)
++ **Documentation:** [Aspose.Email for Python via .NET Documentation](https://docs.aspose.com/display/emailpythonnet/Installation)
 + **Forum:** [Aspose.Email for .NET Forum](https://forum.aspose.com/c/email)
 + **Blog:** [Aspose.Email for .NET Blog](https://blog.aspose.com/category/aspose-products/aspose-email-product-family/)

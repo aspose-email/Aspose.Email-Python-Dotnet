@@ -19,17 +19,17 @@ Directory | Description
 * You can either clone the repository using your favorite GitHub client or download the ZIP file from here.
 * Extract the contents of the ZIP file to any folder on your computer. All the examples are located in the Examples folder.
 * Data folder at the root folder of Examples contains input files. It is mandatory that you download the Data folder along with the examples project.
-* Run the command **pip install Aspose.Email-for-Python-via-NET** in the command prompt to install Aspose.Email for Python via .NET. For additional ways to install Aspose.Email for Python via .NET, please visit this [link](https://docs.aspose.com/display/emailpythonnet/Installation).
+* Run the command **pip install Aspose.Email-for-Python-via-NET** in the command prompt to install Aspose.Email for Python via .NET. For additional ways to install Aspose.Email for Python via .NET, please visit this [link](https://docs.aspose.com/email/pythonnet/installation/).
 * Open RunExamples.py, all the examples are called from here.
 * Uncomment the examples you want to run from within the project.
 
-Please find more details on how to run the examples [here](https://docs.aspose.com/display/emailpythonnet/How+to+Run+the+Examples).
+Please find more details on how to run the examples [here](https://docs.aspose.com/email/pythonnet/how-to-run-the-examples/).
 
 ## Resources
 
 * **Website:** [www.aspose.com](https://www.aspose.com)
 * **Product Home:** [Aspose.Email for Python via .NET](https://products.aspose.com/email/python-net)
 * **Download:** [Download Aspose.Email for Python via .NET](https://downloads.aspose.com/email/pythonnet)
-* **Documentation:** [Aspose.Email for Python via .NET Documentation](https://docs.aspose.com/display/emailpythonnet/Home)
+* **Documentation:** [Aspose.Email for Python via .NET Documentation](https://docs.aspose.com/email/pythonnet/)
 * **Forum:** [Aspose.Email for .NET Forum](https://forum.aspose.com/c/email)
 * **Blog:** [Aspose.Email for .NET Blog](https://blog.aspose.com/category/email/)

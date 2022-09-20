@@ -9,10 +9,10 @@ def run():
     eml = MailMessage.load(dataDir + "Message.eml");
 
     # Save as msg with preserved dates
-    msgSaveOptions = MsgSaveOptions(MailMessageSaveType.OutlookMessageFormatUnicode)
-    msgSaveOptions.PreserveOriginalDates = True
+    msgSaveOptions = MsgSaveOptions(MailMessageSaveType.outlook_message_format_unicode)
+    msgSaveOptions.preserve_original_dates = True
 
-    eml.save(Path.Combine(dataDir, "outTest_out.msg"), msgSaveOptions);
+    eml.save(dataDir + "outTest_out.msg", msgSaveOptions)
     #ExEnd: SavingMSGWithPreservedDates
     
 if __name__ == '__main__':

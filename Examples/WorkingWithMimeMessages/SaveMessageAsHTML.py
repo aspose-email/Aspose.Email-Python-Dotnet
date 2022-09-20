@@ -1,21 +1,21 @@
 import aspose.email as ae
-from aspose.email import MailMessage, EmlLoadOptions, HtmlSaveOptions, MailMessageSaveType
+from aspose.email import MailMessage, EmlLoadOptions, HtmlSaveOptions, MailMessageSaveType, SaveOptions, HtmlFormatOptions
 
 def run():
     
     dataDir = "Data/"
     #ExStart: SaveMessageAsHTML
     # Load file
-    message = MailMessage.load(dataDir + "Message.eml");
+    message = MailMessage.load(dataDir + "Message.eml")
 
-    message.save(dataDir + "SaveAsHTML_out.html", SaveOptions.DefaultHtml);
+    message.save(dataDir + "SaveAsHTML_out.html", SaveOptions.default_html)
 
     #OR
 
     eml = MailMessage.load(dataDir + "Message.eml")
     options = SaveOptions.default_html
     options.embed_resources = False
-    options.HtmlFormatOptions = HtmlFormatOptions.WriteHeader | HtmlFormatOptions.WriteCompleteEmailAddress #save the message headers to output HTML using the formatting options
+    options.html_format_options = HtmlFormatOptions.WRITE_HEADER | HtmlFormatOptions.WRITE_COMPLETE_EMAIL_ADDRESS #save the message headers to output HTML using the formatting options
     eml.save(dataDir + "SaveAsHTML1_out.html", options)
     #ExEnd: SaveMessageAsHTML
     

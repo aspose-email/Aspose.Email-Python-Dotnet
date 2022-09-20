@@ -8,7 +8,7 @@ def run():
     options = MsgLoadOptions()
     options.preserve_tnef_attachments = True
     eml = MailMessage.load(dataDir + "EmbeddedImage1.msg", options)
-    for attachment in eml.Attachments:
+    for attachment in eml.attachments:
         print(attachment.name)
     #ExEnd: ReadMessageByPreservingTNEFAttachments
     

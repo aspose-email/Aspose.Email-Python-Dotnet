@@ -1,5 +1,5 @@
 import aspose.email as ae
-from aspose.email import MailMessage, EmlLoadOptions, MsgSaveOptions, MailMessageSaveType
+from aspose.email import MailMessage, EmlLoadOptions, MsgSaveOptions, MailMessageSaveType, SaveOptions
 
 def run():
     
@@ -8,7 +8,7 @@ def run():
     # Load file
     eml = MailMessage.load(dataDir + "Message.eml")
 
-    eml.save(Path.Combine(dataDir, "outTest_out.msg"), SaveOptions.default_mhtml)
+    eml.save(dataDir + "outTest_out.msg", SaveOptions.default_mhtml)
     #ExEnd: SaveMailMessageAsMHTML
     
 if __name__ == '__main__':

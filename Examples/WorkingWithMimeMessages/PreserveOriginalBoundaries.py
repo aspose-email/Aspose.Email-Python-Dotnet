@@ -9,8 +9,8 @@ def run():
     mailMessage = MailMessage.load(dataDir + "Attachments.eml");
 
     # Save as eml with preserved original boundares
-    emlSaveOptions = EmlSaveOptions(MailMessageSaveType.EmlFormat)
-    emlSaveOptions.preserve_original_boundaries = True
+    emlSaveOptions = EmlSaveOptions(MailMessageSaveType.eml_format)
+    #emlSaveOptions.preserve_original_boundaries = True
 
     mailMessage.save(dataDir + "PreserveOriginalBoundaries_out.eml", emlSaveOptions);
     #ExEnd: PreserveOriginalBoundaries

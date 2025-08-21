@@ -8,7 +8,7 @@ def run():
     client.port = 587
     client.username = "username"
     client.password = "password"
-    client.security_options = SecurityOptions.SSLEXPLICIT
+    client.security_options = SecurityOptions.SSL_EXPLICIT
     #ExEnd: SSLEnabledSMTPServer
 
 if __name__ == '__main__':

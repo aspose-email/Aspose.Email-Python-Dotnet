@@ -10,7 +10,7 @@ def run():
     eml.subject = "Message with Alternate Text"
     eml.is_body_html = True
     eml.html_body = "<html><body>This is the <b>HTML</b>body</body></html>"
-    eml.from_address = "from@gmail.com"
+    eml.from_address = ae.MailAddress("from@gmail.com")
     eml.to.append(ae.MailAddress("to@gmail.com", "Recipient 1"))
 
     # Creates AlternateView to view an email message using the content specified in the //string

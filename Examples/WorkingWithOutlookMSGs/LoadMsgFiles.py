@@ -4,7 +4,7 @@ def run():
 	dataDir = "Data/"
 	#ExStart: LoadMsgFiles
 	# Create an instance of MapiMessage from file
-	msg = MapiMessage.from_file(dataDir + "CreatingAndSavingOutlookMessages_out.msg")
+	msg = MapiMessage.load(dataDir + "CreatingAndSavingOutlookMessages_out.msg")
 
 	# Get subject
 	print("Subject: " + msg.subject)

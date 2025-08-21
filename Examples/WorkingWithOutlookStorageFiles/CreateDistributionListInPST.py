@@ -20,7 +20,11 @@ def run():
         displayName2 = "Wichert Kroos"
         email2 = "WichertKroos@teleworm.us"
 
-        os.remove(dataDir + "CreateDistributionListInPST_out.pst")
+        try:
+            os.remove(dataDir + "CreateDistributionListInPST_out.pst")
+        except FileNotFoundError:
+            pass
+
         personalStorage = PersonalStorage.create(dataDir + "CreateDistributionListInPST_out.pst", FileFormatVersion.UNICODE)
 
         contactFolder = personalStorage.create_predefined_folder("Contacts", StandardIpmFolder.CONTACTS)

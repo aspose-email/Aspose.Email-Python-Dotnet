@@ -4,7 +4,7 @@ from aspose.email.mapi import MapiNote, NoteSaveFormat, NoteColor
 def run():
 	dataDir = "Data/"
 	#ExStart: ReadingMapiNote
-	note = MapiMessage.from_file(dataDir + "CreateAndSaveOutlookNote_out.msg")
+	note = MapiMessage.load(dataDir + "CreateAndSaveOutlookNote_out.msg")
 	note2 = note.to_mapi_message_item()
 	#ExEnd: ReadingMapiNote
 	

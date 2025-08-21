@@ -9,7 +9,7 @@ def run():
     eml.subject = "Message with Html Body"
     eml.is_body_html = True
     eml.html_body = "<html><body>This is the <b>HTML</b>body</body></html>"
-    eml.from_address = "from@gmail.com"
+    eml.from_address = ae.MailAddress("from@gmail.com")
     eml.to.append(ae.MailAddress("to@gmail.com", "Recipient 1"))
 
     #Send using Smtp Client

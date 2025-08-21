@@ -7,7 +7,7 @@ from aspose.email.mapi import MapiMessage, FollowUpManager, FollowUpOptions
 def run():
 	dataDir = "Data/"
 	#ExStart: DeleteVotingButtonFromMessage
-	message = MapiMessage.from_file("message.msg")
+	message = MapiMessage.load("message.msg")
 
 	FollowUpManager.add_voting_button(message, "Indeed!")
 

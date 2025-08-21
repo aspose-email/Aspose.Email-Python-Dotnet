@@ -8,7 +8,7 @@ def run():
 
 	dataDir = "Data/"
 	#ExStart: LoadingContactFromVCardWithSpecifiedEncoding
-	contactReadFromFile = MapiContact.from_vcard(dataDir + "Contact.vcf", "UTF-8")
+	contactReadFromFile = MapiContact.from_v_card(dataDir + "Contact.vcf", "UTF-8")
 	#ExEnd: LoadingContactFromVCardWithSpecifiedEncoding
 	
 if __name__ == '__main__':

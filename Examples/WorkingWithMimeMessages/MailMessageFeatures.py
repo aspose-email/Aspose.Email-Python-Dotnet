@@ -5,7 +5,7 @@ def run():
     
     #ExStart: MailMessageFeatures
     message = ae.MailMessage()
-    message.from_address = "sender@sender.com"
+    message.from_address = ae.MailAddress("sender@sender.com")
     message.to.append(ae.MailAddress("receiver@receiver.com", "Receiver"))
     message.subject = "Using MailMessage Features"
 
@@ -16,10 +16,10 @@ def run():
     message.priority = ae.MailPriority.HIGH
 
     # Specify message sensitivity
-    message.Sensitivity = ae.MailSensitivity.NORMAL
+    message.sensitivity = ae.MailSensitivity.NORMAL
 
     # Specify options for delivery notifications
-    message.DeliveryNotificationOptions = ae.DeliveryNotificationOptions.ON_SUCCESS
+    message.delivery_notification_options = ae.DeliveryNotificationOptions.ON_SUCCESS
     
     #ExEnd: MailMessageFeatures
     

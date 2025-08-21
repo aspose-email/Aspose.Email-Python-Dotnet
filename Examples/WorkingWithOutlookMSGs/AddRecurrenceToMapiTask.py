@@ -17,9 +17,8 @@ def run():
 	rec = MapiCalendarDailyRecurrencePattern()
 	rec.pattern_type = MapiCalendarRecurrencePatternType.DAY
 	rec.period = 1
-	rec.week_start_day = 0 #0 is for Sunday and so on. WeekStartDay=0
 	rec.occurrence_count = 0
-	task.recurrence = True
+	task.recurrence = rec
 	task.save(dataDir + "AsposeDaily_out.msg", TaskSaveFormat.MSG)
 
 	# Set the weekly recurrence
@@ -39,7 +38,6 @@ def run():
 	recMonthly.end_type = MapiCalendarRecurrenceEndType.NEVER_END
 	recMonthly.day = 30
 	recMonthly.occurrence_count = 0 
-	recMonthly.week_start_day = 0 #0 is for Sunday and so on. WeekStartDay=0
 	task.recurrence = recMonthly
 	task.save(dataDir + "AsposeMonthly_out.msg", TaskSaveFormat.MSG);
 

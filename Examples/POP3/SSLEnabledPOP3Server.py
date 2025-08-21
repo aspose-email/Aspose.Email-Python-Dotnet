@@ -9,7 +9,7 @@ def run():
     client.username = "your.username@gmail.com"
     client.password = "your.password"
     client.port = 995
-    client.security_options = SecurityOptions.SSLEXPLICIT;
+    client.security_options = SecurityOptions.SSL_EXPLICIT;
     print("Connecting to POP3 server using SSL.")
     #ExEnd: SSLEnabledPOP3Server
 

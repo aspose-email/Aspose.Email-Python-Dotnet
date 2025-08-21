@@ -5,7 +5,7 @@ from aspose.email.clients import SecurityOptions
 def run():
     #ExStart: SSLEnabledIMAPServer
     client = ImapClient("imap.domain.com", 993, "user@domain.com", "pwd")
-    client.security_options = SecurityOptions.SSLIMPLICIT
+    client.security_options = SecurityOptions.SSL_IMPLICIT
     #ExEnd:SSLEnabledIMAPServer
 
 if __name__ == '__main__':

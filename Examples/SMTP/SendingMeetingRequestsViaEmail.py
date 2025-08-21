@@ -1,6 +1,7 @@
 import aspose.email as ae
 from aspose.email.clients.smtp import SmtpClient
 from aspose.email.clients import SecurityOptions
+from aspose.email import MailAddress
 from aspose.email import MailMessage
 from aspose.email.calendar import Appointment
 
@@ -10,7 +11,7 @@ from datetime import timedelta
 def run():
     #ExStart: SendingMeetingRequestsViaEmail
     eml = ae.MailMessage()
-    eml.from_address = "from@gmail.com"
+    eml.from_address = MailAddress("from@gmail.com")
     eml.to.append(ae.MailAddress("to@gmail.com", "Recipient 1"))
 
     #Create Appointment instance

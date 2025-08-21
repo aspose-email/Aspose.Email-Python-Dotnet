@@ -8,7 +8,7 @@ def run():
 
 	dataDir = "Data/"
 	#ExStart: ReadingVotingOptions
-	message = MapiMessage.from_file(dataDir + "MessageWithVotingResponded.msg")
+	message = MapiMessage.load(dataDir + "MessageWithVotingResponded.msg")
 
 	# This method can be useful when except voting buttons it is necessary to get other parameters (ex. a category)
 	options = FollowUpManager.get_options(message)

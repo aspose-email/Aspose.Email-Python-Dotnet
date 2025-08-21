@@ -8,7 +8,7 @@ def run():
 
 	dataDir = "Data/"
 	#ExStart: ReadVoteResultsInformation
-	msg = MapiMessage.from_file(dataDir + "AddVotingButtonToExistingMessage.msg");
+	msg = MapiMessage.load(dataDir + "AddVotingButtonToExistingMessage.msg");
 	for recipient in msg.recipients:
 		print("Recipient: {0}".format(recipient.display_name))
 

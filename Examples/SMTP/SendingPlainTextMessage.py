@@ -8,7 +8,7 @@ def run():
     eml = ae.MailMessage()
     eml.subject = "Message with Plain Text Body"
     eml.body = "This is plain text body."
-    eml.from_address = "from@gmail.com"
+    eml.from_address = ae.MailAddress("from@gmail.com")
     eml.to.append(ae.MailAddress("to@gmail.com", "Recipient 1"))
 
     #Send using Smtp Client

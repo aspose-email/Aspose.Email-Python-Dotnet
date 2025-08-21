@@ -1,4 +1,5 @@
 from aspose.email import MailMessage
+from aspose.email import MailAddress
 from aspose.email.storage.pst import *
 from aspose.email.mime import HeaderCollection
 import aspose.email.mapi.msg as msg
@@ -10,8 +11,8 @@ def run():
 	eml =  MailMessage()
 
 	# Set from, to, subject and body properties
-	eml.from_address = "sender@domain.com";
-	eml.to.append("receiver@domain.com");
+	eml.from_address = MailAddress("sender@domain.com");
+	eml.to.append(MailAddress("receiver@domain.com"));
 	eml.subject = "This is test message";
 	eml.body = "This is test body";
 

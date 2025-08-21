@@ -9,7 +9,7 @@ def run():
 	dataDir = "Data/"
 	#ExStart: GetMapiProperty
 	# Load from file
-	msg = MapiMessage.from_file(dataDir + "message.msg")
+	msg = MapiMessage.load(dataDir + "message.msg")
 
 	# Access the MapiPropertyTag.PR_SUBJECT property
 	prop = msg.properties[MapiPropertyTag.SUBJECT]

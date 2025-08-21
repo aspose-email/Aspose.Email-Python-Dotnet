@@ -10,7 +10,7 @@ def run():
 	inboxFolder = pst.root_folder.add_sub_folder("Inbox");
 
 	# Add message to Inbox Folder
-	inboxFolder.add_message(MapiMessage.from_file(dataDir + "MapiMsgWithPoll.msg"))
+	inboxFolder.add_message(MapiMessage.load(dataDir + "MapiMsgWithPoll.msg"))
 
 	pst.dispose()
 	#ExEnd: AddMessagesToPSTFiles

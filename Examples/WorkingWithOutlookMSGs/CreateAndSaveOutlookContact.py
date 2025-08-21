@@ -15,7 +15,7 @@ def run():
 	contact.professional_info = MapiContactProfessionalPropertySet("Awthentikz", "Social work assistant")
 	contact.personal_info.personal_home_page = "B2BTies.com"
 	contact.physical_addresses.work_address.address = "Im Astenfeld 59 8580 EDELSCHROTT"
-	contact.electronic_addresses.email_1 = MapiContactElectronicAddress("Experwas", "SMTP", "BerthaABuell@armyspy.com")
+	contact.electronic_addresses.email1 = MapiContactElectronicAddress("Experwas", "SMTP", "BerthaABuell@armyspy.com")
 	contact.telephones = MapiContactTelephonePropertySet("06605045265")
 	contact.mileage = "Some test mileage"
 	contact.billing = "Test billing information"

@@ -5,13 +5,13 @@ def run():
     #ExStart:RequestReadReceipt
     # Create an Instance of MailMessage class
     message = ae.MailMessage()
-    message.from_address = "sender@sender.com"
+    message.from_address = ae.MailAddress("sender@sender.com")
     message.to.append(ae.MailAddress("receiver@receiver.com", "Receiver"))
     message.subject = "Using MailMessage Features"
     message.html_body = "<html><body>This is the Html body</body></html>"
-    message.DeliveryNotificationOptions = ae.DeliveryNotificationOptions.ON_SUCCESS
+    message.delivery_notification_options = ae.DeliveryNotificationOptions.ON_SUCCESS
     message.headers.add("Return-Receipt-To", "sender@sender.com")
-    message.Headers.add("Disposition-Notification-To", "sender@sender.com")
+    message.headers.add("Disposition-Notification-To", "sender@sender.com")
 
     # Create an instance of SmtpClient Class and specify your mailing Host server, Username, Password and Port No
     client = ae.clients.smtp.SmtpClient("smtp.gmail.com", 995, "username", "password")

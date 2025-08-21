@@ -6,11 +6,11 @@ def run():
     eml = ae.MailMessage()
     
     # Specify ReplyTo, From, To field, Cc and Bcc Addresses
-    eml.reply_to_list.Add("reply@reply.com")
-    eml.from_address = "sender@sender.com"
+    eml.reply_to_list.append(ae.MailAddress("reply@reply.com"))
+    eml.from_address = ae.MailAddress("sender@sender.com")
     eml.to.append(ae.MailAddress("to1@domain.com", "Recipient 1"))
     eml.subject = "test mail"
-    eml.headers.Add("secret-header", "mystery")
+    eml.headers.add("secret-header", "mystery")
     
     client = ae.clients.smtp.SmtpClient("smtp.gmail.com", 995, "username", "password")
     

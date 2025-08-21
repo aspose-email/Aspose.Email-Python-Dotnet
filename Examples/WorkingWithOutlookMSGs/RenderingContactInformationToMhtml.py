@@ -8,7 +8,7 @@ def run():
 
 	dataDir = "Data/"
 	#ExStart: RenderingContactInformationToMhtml
-	msg = MapiMessage.from_file(dataDir + "Contact.msg")
+	msg = MapiMessage.load(dataDir + "Contact.msg")
 	op = MailConversionOptions()
 	eml = msg.to_mail_message(op)
 

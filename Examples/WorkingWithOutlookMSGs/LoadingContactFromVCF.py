@@ -7,9 +7,10 @@ from aspose.email.personalinfo.vcard import VCardContact
 def run():
 	dataDir = "Data/"
 	#ExStart: LoadingContactFromVCF
-	VCardContact.load(dataDir + "Contact.vcf")
 
-	apiContact = MapiContact.from_vcard(dataDir + "Contact.vcf")
+	vcard_contact = VCardContact.load(dataDir + "Contact.vcf")
+	print('Email Address: ', vcard_contact.emails[0].email_address)
+
 	#ExEnd: LoadingContactFromVCF
 	
 if __name__ == '__main__':

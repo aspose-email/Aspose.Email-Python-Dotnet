@@ -24,7 +24,6 @@ def run():
 	tasksFolder = personalStorage.create_predefined_folder("Tasks", StandardIpmFolder.TASKS)
 	tasksFolder.add_mapi_message_item(task)
 
-	personalStorage.dispose()
 	#ExEnd: AddMapiTaskToPST
 
 if __name__ == '__main__':

@@ -16,7 +16,7 @@ def run():
 	mhtSaveOptions = MhtSaveOptions()
 	mhtSaveOptions.check_body_content_encoding = True
 	mhtSaveOptions.preserve_original_boundaries = True
-	formatOp = MhtFormatOptions.WRITE_HEADER | MhtFormatOptions.RENDER_VCARD_INFO
+	formatOp = MhtFormatOptions.WRITE_HEADER | MhtFormatOptions.RENDER_V_CARD_INFO
 	mhtSaveOptions.rendered_contact_fields = ContactFieldsSet.NAME_INFO | ContactFieldsSet.PERSONAL_INFO | ContactFieldsSet.TELEPHONES | ContactFieldsSet.EVENTS
 	mhtSaveOptions.mht_format_options = formatOp
 	eml.save(dataDir + "RenderingContactInformationToMhtml_out.mhtml", mhtSaveOptions)

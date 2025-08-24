@@ -20,19 +20,16 @@ def run():
 	contact.mileage = "Some test mileage"
 	contact.billing = "Test billing information"
 	contact.other_fields.journal = True
-	contact.personal_info.children = []
-	contact.personal_info.children.append("child1")
-	contact.personal_info.children.append("child2")
-	contact.personal_info.children.append("child3")
+	contact.personal_info.children = ["child1", "child2", "child3"]
 	contact.categories = ["category1", "category2", "category3"]
 
 	contact.other_fields.private = True
 	##contact.OtherFields.ReminderTime = new DateTime(2014, 1, 1, 0, 0, 55);
 	contact.other_fields.reminder_topic = "Test topic"
-	contact.other_fields.user_field_1 = "ContactUserField1"
-	contact.other_fields.user_field_2 = "ContactUserField2"
-	contact.other_fields.user_field_3 = "ContactUserField3"
-	contact.other_fields.user_field_4 = "ContactUserField4"
+	contact.other_fields.user_field1 = "ContactUserField1"
+	contact.other_fields.user_field2 = "ContactUserField2"
+	contact.other_fields.user_field3 = "ContactUserField3"
+	contact.other_fields.user_field4 = "ContactUserField4"
 
 	#Save the Contact in MSG format
 	contact.save(dataDir + "CreateAndSaveOutlookContact_out.msg",ContactSaveFormat.MSG)

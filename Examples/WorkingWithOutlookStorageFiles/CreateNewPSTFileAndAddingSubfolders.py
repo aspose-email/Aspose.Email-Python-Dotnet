@@ -9,7 +9,6 @@ def run():
 	# Add new folder "Inbox"
 	pst.root_folder.add_sub_folder("Inbox");
 
-	pst.dispose()
 	#ExEnd: CreateNewPSTFileAndAddingSubfolders
 	
 if __name__ == '__main__':

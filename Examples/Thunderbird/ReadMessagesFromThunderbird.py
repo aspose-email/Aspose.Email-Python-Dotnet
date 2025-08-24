@@ -6,7 +6,6 @@ from aspose.email.storage.mbox import MboxLoadOptions
 
 def run():
     dataDir = "Data/"
-    #ExStart: ReadMessagesFromThunderbird
     reader = MboxrdStorageReader(dataDir + "ExampleMbox.mbox", MboxLoadOptions())
 
     eml = reader.read_next_message()
@@ -23,8 +22,5 @@ def run():
         # Get the next message
         eml = reader.read_next_message();
 
-    # Close the streams
-    reader.dispose();
-#ExEnd: ReadMessagesFromThunderbird
 if __name__ == '__main__':
     run()

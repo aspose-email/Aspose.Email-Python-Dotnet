@@ -1,4 +1,5 @@
-from aspose.email.storage.pst import *
+import os
+from aspose.email.storage.pst import PersonalStorage, FileFormatVersion, StandardIpmFolder
 from aspose.email.mapi import MapiNote
 from aspose.email.mapi import NoteColor
 
@@ -25,13 +26,17 @@ def run():
 	note3.height = 500
 	note3.width = 500
 
-	personalStorage = PersonalStorage.create(dataDir + "AddMapiNoteToPST_out.pst", FileFormatVersion.UNICODE)
+	pst_path = os.path.join(dataDir,  "AddMapiNoteToPST_out.pst")
+	if os.path.exists(pst_path):
+		os.remove(pst_path)
+
+	personalStorage = PersonalStorage.create(pst_path, FileFormatVersion.UNICODE)
 
 	notesFolder = personalStorage.create_predefined_folder("Tasks", StandardIpmFolder.NOTES)
 	notesFolder.add_mapi_message_item(note1)
 	notesFolder.add_mapi_message_item(note2)
 	notesFolder.add_mapi_message_item(note3)
-	personalStorage.dispose()
+
 	#ExEnd: AddMapiNoteToPST
 	
 if __name__ == '__main__':

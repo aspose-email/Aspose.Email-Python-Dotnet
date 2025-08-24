@@ -18,7 +18,7 @@ def run():
     writer = CalendarWriter(dataDir + "WriteMultipleEventsToICS_out.ics", saveOptions)
 
     attendees = MailAddressCollection()
-    attendees.append("attendee@domain.com")
+    attendees.append(MailAddress("attendee@domain.com"))
 
     for i in range(10):
         app = Appointment("Room 112", dt.datetime(2018, 5, 27, 22, 12, 11), dt.date(2018, 5, 28), MailAddress("from@domain.com"), attendees)

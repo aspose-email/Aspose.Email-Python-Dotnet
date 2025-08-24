@@ -1,5 +1,6 @@
+import os
 import aspose.email as ae
-from aspose.email import MailMessage, EmlLoadOptions, MhtSaveOptions, MailMessageSaveType
+from aspose.email import MailMessage, EmlLoadOptions, MhtSaveOptions, MailMessageSaveType, SaveOptions
 
 def run():
     
@@ -11,7 +12,7 @@ def run():
     options = MhtSaveOptions()
     options.skip_inline_images = True
 
-    eml.save(Path.Combine(dataDir, "outTest_out.msg"), SaveOptions.default_mhtml)
+    eml.save(os.path.join(dataDir, "outTest_out.msg"), SaveOptions.default_mhtml)
     #ExEnd: ConvertToMHTMLWithoutInlineImages
     
 if __name__ == '__main__':

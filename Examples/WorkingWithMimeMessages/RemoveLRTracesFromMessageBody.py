@@ -10,7 +10,7 @@ def run():
 
     message.linked_resources.remove_at(0, True)
 
-    message.alternate_views[0].linked_resources.clear(True)
+    message.alternate_views[0].linked_resources.clear()
 
     message.save(dataDir + "RemoveLRTracesFromMessageBody_out.eml")
     #ExEnd: RemoveLRTracesFromMessageBody

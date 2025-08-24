@@ -1,4 +1,5 @@
 from aspose.email.storage.pst import *
+from aspose.email.mapi import *
 
 def long_to_mapi_bytes(x):
     return x.to_bytes(8, 'little')
@@ -25,11 +26,13 @@ def run():
 		
 	# Compose the new properties
 	updatedProperties = MapiPropertyCollection()
-	updatedProperties.Add(MapiPropertyTag.SUBJECT_W, MapiProperty(MapiPropertyTag.SUBJECT_W, Encoding.Unicode.GetBytes("New Subject")));
-	updatedProperties.Add(MapiPropertyTag.IMPORTANCE, MapiProperty(MapiPropertyTag.IMPORTANCE, long_to_mapi_bytes(2)));
+	subject  = "New Subject" 
+	updatedProperties.add(MapiPropertyTag.SUBJECT_W, MapiProperty(MapiPropertyTag.SUBJECT_W, subject.encode("utf-16")));
+	updatedProperties.add(MapiPropertyTag.IMPORTANCE, MapiProperty(MapiPropertyTag.IMPORTANCE, long_to_mapi_bytes(2)));
 
 	# update messages having From = "someuser@domain.com" with new properties
-	inbox.ChangeMessages(changeList, updatedProperties);
+      
+	folder.change_messages(changeList, updatedProperties);
 	#ExEnd: UpdateBulkMessagesInPSTFile
 	
 if __name__ == '__main__':

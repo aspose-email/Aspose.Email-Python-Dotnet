@@ -7,23 +7,15 @@ import os.path
 def run():
 	dataDir = "Data/"
         
-        #ExStart: GetCurrentMessageSize
 	reader = MboxrdStorageReader(dataDir + "ExampleMbox.mbox", MboxLoadOptions())
 
+	print(reader.current_data_size)
 	eml = reader.read_next_message()
 
 	# Read all messages in a loop
 	while (eml is not None):
-
-		print(reader.current_data_size)
-
-		eml.dispose();
-
-		eml = None
-
-	# Close the streams
-	reader.dispose();
-#ExEnd: GetCurrentMessageSize
+		print("Subject: " + eml.subject)
+		eml = reader.read_next_message()
 
 if __name__ == '__main__':
     run()

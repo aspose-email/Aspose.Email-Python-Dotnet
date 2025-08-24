@@ -12,7 +12,6 @@ def run():
 	# Add message to Inbox Folder
 	inboxFolder.add_message(MapiMessage.load(dataDir + "MapiMsgWithPoll.msg"))
 
-	pst.dispose()
 	#ExEnd: AddMessagesToPSTFiles
 	
 if __name__ == '__main__':

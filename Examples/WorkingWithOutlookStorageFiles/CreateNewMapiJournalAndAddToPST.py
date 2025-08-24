@@ -16,7 +16,6 @@ def run():
 	tasksFolder = personalStorage.create_predefined_folder("Journal", StandardIpmFolder.JOURNAL)
 	tasksFolder.add_mapi_message_item(journal)
 
-	personalStorage.dispose()
 	#ExEnd:CreateNewMapiJournalAndAddToPST
 	
 if __name__ == '__main__':

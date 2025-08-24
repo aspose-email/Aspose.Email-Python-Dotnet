@@ -13,7 +13,9 @@ def run():
 		print("Recipient: {0}".format(recipient.display_name))
 
 		#get the PR_RECIPIENT_AUTORESPONSE_PROP_RESPONSE property
-		print("Response: {0}".format(recipient.properties[MapiPropertyTag.RECIPIENT_AUTORESPONSE_PROP_RESPONSE].get_string()))
+		response_prop = recipient.properties[MapiPropertyTag.RECIPIENT_AUTORESPONSE_PROP_RESPONSE]
+		if response_prop is not None:
+			print(f"Response: {response_prop}")
 
 		#Get the PR_RECIPIENT_TRACKSTATUS_TIME property
 		mt = recipient.properties[MapiPropertyTag.RECIPIENT_TRACKSTATUS_TIME]

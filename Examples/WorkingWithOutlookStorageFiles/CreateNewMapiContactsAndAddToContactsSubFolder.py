@@ -52,7 +52,6 @@ def run():
 	contactFolder.add_mapi_message_item(contact5);
 	contactFolder.add_mapi_message_item(contact6);
 
-	personalStorage.dispose()
 	#ExEnd: CreateNewMapiContactsAndAddToContactsSubFolder
 	
 if __name__ == '__main__':
